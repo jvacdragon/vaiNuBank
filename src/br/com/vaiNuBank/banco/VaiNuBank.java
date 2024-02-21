@@ -1,4 +1,4 @@
-package banco;
+package br.com.vaiNuBank.banco;
 
 import br.com.vaiNuBank.contas.Conta;
 

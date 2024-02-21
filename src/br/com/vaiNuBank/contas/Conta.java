@@ -1,9 +1,9 @@
 package br.com.vaiNuBank.contas;
 
-import banco.VaiNuBank;
-import erros.ErrorDeposito;
-import erros.ErrorTransferencia;
-import erros.ErrorSaque;
+import br.com.vaiNuBank.banco.VaiNuBank;
+import br.com.vaiNuBank.erros.ErrorDeposito;
+import br.com.vaiNuBank.erros.ErrorTransferencia;
+import br.com.vaiNuBank.erros.ErrorSaque;
 
 import java.util.Optional;
 

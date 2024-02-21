@@ -1,4 +1,4 @@
-import banco.VaiNuBank;
+import br.com.vaiNuBank.banco.VaiNuBank;
 import br.com.vaiNuBank.contas.ContaCorrente;
 import br.com.vaiNuBank.contas.ContaPoupanca;
 

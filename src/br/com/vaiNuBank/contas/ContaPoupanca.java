@@ -1,6 +1,6 @@
 package br.com.vaiNuBank.contas;
 
-import erros.ErrorSaque;
+import br.com.vaiNuBank.erros.ErrorSaque;
 
 import java.time.LocalDate;
 
