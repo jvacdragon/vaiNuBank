@@ -70,7 +70,7 @@ public class Conta implements IConta{
             if(OConta.isEmpty()) throw new ErrorTransferencia("Conta para transferencia não existente em nosso banco de dados.");
 
             //Verifica se há valor suficiente na conta para transferencia.
-            if(this.getValorAtual() < transferencia) throw new ErrorTransferencia("Sem valor suficiente na conta para transferencia.");
+            if(this.getValorAtual() <= transferencia) throw new ErrorTransferencia("Sem valor suficiente na conta para transferencia.");
 
             //Transfere o valor caso passe pelas verificações acima
             OConta.get().setValorAtual(OConta.get().getValorAtual() + transferencia);
