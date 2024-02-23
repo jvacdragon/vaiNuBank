@@ -81,7 +81,17 @@ public class Conta implements IConta{
             return -1;
         }
 
-        return 0;
+        return transferencia;
+    }
+
+    @Override
+    public String toString() {
+        return "Conta{" +
+                "agenciNum='" + agenciNum + '\'' +
+                ", nomeTitular='" + nomeTitular + '\'' +
+                ", cpf='" + cpf + '\'' +
+                ", valorAtual=" + valorAtual +
+                '}';
     }
 
     public double getValorAtual() {

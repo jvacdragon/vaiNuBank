@@ -17,6 +17,16 @@ public class VaiNuBank {
         }
     }
 
+    public static void remove(Conta conta){
+        Optional<Conta> OConta = contas.stream().filter(c -> c.getAgenciNum().equals(conta.getAgenciNum()) && c.getCpf().
+                equals(conta.getCpf())).findFirst();
+        if(OConta.isEmpty()) System.out.println("Problema ao achar sua conta em nosso banco de dados.");
+        else{
+            contas.remove(conta);
+            System.out.println("Conta deletada com sucesso");
+        }
+    }
+
     public static ArrayList<Conta> getContas() {
         return contas;
     }

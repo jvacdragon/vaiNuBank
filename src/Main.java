@@ -153,6 +153,7 @@ public class Main {
         System.out.println("1. Depositar");
         System.out.println("2. Sacar");
         System.out.println("3. Transferir");
+        System.out.println("4. Deletar conta");
         System.out.print("Opção: ");
 
         opcao = scanner.nextInt();
@@ -196,7 +197,7 @@ public class Main {
                     System.out.println("Digite a agência do remetente: ");
                     String agencia = scanner.nextLine();
 
-                    System.out.println("Digite o CPF do remetente");
+                    System.out.println("Digite o CPF do remetente: ");
                     String cpf = scanner.nextLine();
 
                     c.transferencia(valorTransferencia, agencia, cpf);
@@ -205,6 +206,14 @@ public class Main {
                     System.out.println(e.getMessage());
                     System.out.println("Favor digitar valores válidos.");
                 }
+                break;
+            case 4:
+                Optional<Conta> conta = VaiNuBank.getContas()
+                        .stream()
+                        .filter(account -> account.getCpf().equals(c.getCpf()) && account.getAgenciNum().equals(c.getAgenciNum()))
+                        .findFirst();
+
+                VaiNuBank.remove(conta.get());
                 break;
             default:
                 System.out.println("Opção inválida. Por favor, escolha uma opção válida.");

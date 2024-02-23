@@ -26,6 +26,13 @@ public class ContaPoupanca extends Conta{
         return saque*0.98;
     }
 
+    @Override
+    public String toString() {
+        return "ContaPoupanca{" +
+                "aniversario=" + aniversario +
+                "} " + super.toString();
+    }
+
     public LocalDate getAniversario() {
         return aniversario;
     }

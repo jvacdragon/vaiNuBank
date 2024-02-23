@@ -15,4 +15,11 @@ public class ContaCorrente extends Conta{
     public void setLimiteCred(double limiteCred) {
         this.limiteCred = limiteCred;
     }
+
+    @Override
+    public String toString() {
+        return "ContaCorrente{" +
+                "limiteCred=" + limiteCred +
+                "} " + super.toString();
+    }
 }
